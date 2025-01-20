@@ -47,10 +47,10 @@ class MainActivity : AppCompatActivity() {
             val height = heightData.toDouble()
             val idealWeight = if (selectedGender.text == "Pria") {
                 resultGender.text = "Jenis kelamin: Pria"
-                (height-100) * 0.9
+                (height-100) - (0.1 * (height-100))
             } else {
                 resultGender.text = "Jenis kelamin: Wanita"
-                (height-100) * 0.85
+                (height-100) - (0.15  * (height-100))
             }
             resultName.text= "nama $nameData"
             resultText.text= "Berat Badan Ideal anda adalah ${"%.2f".format(idealWeight)} kg"
